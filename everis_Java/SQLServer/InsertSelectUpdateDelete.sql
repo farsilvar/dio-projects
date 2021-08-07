@@ -37,6 +37,75 @@ from clientes*/
 /*select *, CONVERT(varchar, DataSolicitacao, 103)
 from pedidos*/
 
-select * from clientes
-select * from pedidos
-select * from PedidoItem
+/*ALTER TABLE clientes add CONSTRAINT pk_cliente PRIMARY KEY (Codigo)*/
+
+/*ALTER TABLE PedidoItem ADD CONSTRAINT fk_pedido FOREIGN KEY (clientes) REFERENCES pedidos (Codigo)*/
+
+/*ALTER TABLE Pedidos add CodigoStatus int
+ALTER TABLE Pedidos add DescStatus varchar(50)*/
+
+/*select *
+FROM clientes cli
+inner join pedidos ped
+on cli.Codigo = ped.CodigoCliente*/
+
+/*select *
+FROM clientes cli
+left join pedidos ped
+on cli.Codigo = ped.CodigoCliente*/
+
+/*select *
+FROM clientes cli
+right join pedidos ped
+on cli.Codigo = ped.CodigoCliente*/
+
+/*SELECT *
+FROM PedidoItem t1
+INNER JOIN pedidos t2
+on  t1.CodigoPedido = t2.Codigo
+and t1.CodigoProduto = t2.Codigo
+where ...*/
+
+/*
+Select  t4.Codigo
+        t4.descricao
+        sum(t1.Preco * t1.Quantidade)
+group   by t4.Codigo
+        t4.Descricao
+ORDER   by ... 
+
+ou 
+Select  t4.Codigo
+        t4.descricao
+        sum(t1.Preco * t1.Quantidade)
+group   by t4.Codigo
+        t4.Descricao
+having sum(t1.Preco * t1.Quantidade) > 10
+*/
+
+/*SELECT  *
+from    clientes cli
+WHERE   cli.Codigo not in(1, 2, 7)*/
+
+/*
+SELECT  *
+from    clientes cli
+LEFT    JOIN pedidos ped
+on      cli.Codigo = ped.CodigoCliente
+where   ped.Codigo is NOT NULL
+
+o de cima é igual ao de baixo
+
+SELECT  *
+from    clientes cli
+WHERE   cli.Codigo not in(select codigoCliente from pedidos)*/
+
+SELECT  *
+from    clientes cli
+SELECT  cli.Codigo
+        cli.Nome
+
+select *
+FROM pedidos
+select *
+from clientes
