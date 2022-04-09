@@ -1,7 +1,4 @@
-Teste
-
-| Teste | Col 1 | Col 2 
-| :---: | :---: | :--- 
-| 1 | 2 | 3 
-
-Teste
+| Primeiro cabeçalho  |  Segundo cabeçalho  |
+| ------------------- | ------------------- |
+|  Célula de conteúdo |  Célula de conteúdo |
+|  Célula de conteúdo |  Célula de conteúdo |
